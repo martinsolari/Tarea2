@@ -64,4 +64,16 @@ class Usuario{
     }
 
 
+    public boolean equals(Object obj){
+        Usuario u = (Persona) obj;
+        if (this.getCedula() == u.getCedula){
+            return true;
+        }
+
+        else{
+            return false;
+        }
+    }
+
+
 }
