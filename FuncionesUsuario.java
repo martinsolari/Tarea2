@@ -2,7 +2,7 @@ import Usuario.java;
 
 class FuncionesUsuario{
 
-    public int CalcularImpuestos(Usuario u){
+    public float CalcularImpuestos(Usuario u){
         
         int edad = u.getEdad();
         float imp=0;
@@ -29,6 +29,12 @@ class FuncionesUsuario{
 
         return imp;
 
+    }
+
+    public float CobroSueldo(Usuario u,float sueldo){
+        
+        float sal = sueldo - CalcularImpuestos(u);
+        u.setSaldo(sal);
     }
 
 }
